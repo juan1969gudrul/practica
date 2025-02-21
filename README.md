@@ -50,3 +50,7 @@ En header.blade.php hacemos otro nuevo header para poder acomplar nuestra pagina
 ![alt text](image.png)
 
 Creo un documento llamado docker-compose.yaml. y ahí pondre los servicios que quiero
+![alt text](image.png)
+
+vamos al fichero .env y modifico a quien le doy acceso
+![alt text](image.png)
