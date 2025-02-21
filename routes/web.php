@@ -2,10 +2,17 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AlumnoController;
+
 
 Route::get('/', function () {
     return view('main');
-});
+})->name ("main");
+
+
+Route::get("alumnos",[AlumnoController::class, "index"])
+->name("alumnos")
+->middleware("auth");
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -22,4 +29,5 @@ Route::view("home", "home");
 Route::view("about", "about");
 Route::view("contact", "contact");
 Route::view("noticias", "noticias");
+
 require __DIR__.'/auth.php';

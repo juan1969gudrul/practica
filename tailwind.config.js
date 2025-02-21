@@ -20,13 +20,15 @@ export default {
                 "65v": "65vh",
             },
             colors: {
-                header: "#E7741E",
-                nav: "#a3a8b7",
+                header: "#D7F5FD",
+                nav: "#4D666D",
                 main: "#FFFFFF",
                 footer: "#A3A8B7",
             },
         },
     },
 
-    plugins: [forms],
+    plugins: [forms, require("daisyui")],
 };
+
+
