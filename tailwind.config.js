@@ -20,7 +20,7 @@ export default {
                 "65v": "65vh",
             },
             colors: {
-                header: "#D7F5FD",
+                header: "#D1D5DB",
                 nav: "#4D666D",
                 main: "#FFFFFF",
                 footer: "#A3A8B7",

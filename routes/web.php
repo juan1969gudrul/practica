@@ -9,13 +9,15 @@ Route::get('/', function () {
     return view('main');
 })->name ("main");
 
+Route::resource("alumno", AlumnoController::class); //añado todas las lineas de abajo
 
-Route::get("alumnos",[AlumnoController::class, "index"])
-->name("alumnos")
-->middleware("auth");
+
+//Route::get('Alumnos', [\App\Http\Controllers\AlumnoController::class, 'index'])->name('alumnos');Route::resource('alumnos', AlumnoController::class);
+Route::resource('alumnos', \App\Http\Controllers\AlumnoController::class);
+
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    return view('main');
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {

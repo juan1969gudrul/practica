@@ -10,7 +10,7 @@
     focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded "> Noticias</button>
     
 @auth
-    <a href="{{route('alumnos')}}" class=" mx-4 bg-#90B2CA-500 text-white py-2 px-2 
+    <a href="{{route('alumnos.index')}}" class=" mx-4 bg-#90B2CA-500 text-white py-2 px-2 
     rounded hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded "> Alumnos</a>
 
 @endauth

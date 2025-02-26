@@ -54,3 +54,14 @@ Creo un documento llamado docker-compose.yaml. y ahí pondre los servicios que q
 
 vamos al fichero .env y modifico a quien le doy acceso
 ![alt text](image.png)
+
+Para crear tablas interactuando con la base de datos ejecuto dos comandos
+![alt text](image.png)
+![alt text](image-1.png)
+
+Fabricamos valores
+![alt text](image-2.png)
+
+creo la tabla llamada Alumno
+![alt text](image-3.png)
+
