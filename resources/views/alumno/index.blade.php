@@ -34,7 +34,7 @@
                             </td>
 
                             <td>
-                            <form action="{{route('alumno.destroy', $alumno->id)}}" method="post">
+                            <form onsubmit=event.preventDefault() id="formulario" {{$alumno->id}}"" action="{{route('alumno.destroy', $alumno->id)}}" method="post">
                                 @method("DELETE")
                                 @csrf
                             <button type="submit" class= "">
