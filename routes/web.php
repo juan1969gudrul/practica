@@ -10,6 +10,8 @@ Route::get('/', function () {
 })->name ("main");
 
 Route::resource("alumno", AlumnoController::class); //añado todas las lineas de abajo
+Route::get('/alumnos', [AlumnoController::class, 'index'])->name('alumno.index');
+
 
 
 //Route::get('Alumnos', [\App\Http\Controllers\AlumnoController::class, 'index'])->name('alumnos');Route::resource('alumnos', AlumnoController::class);

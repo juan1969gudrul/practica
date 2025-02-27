@@ -3,18 +3,14 @@
     <div class="flex flex-col justify-center items-center p-5 bg-white rounded-xl max-h-full m-5 p-5    ">
 <h1 class=" text-2xl text-footer" >Datos nuevo alumno </h1>
 <form action="{{route('alumnos.store')}}" method="post" class="space-y-4 grid grid-cols-2 gap-4" >
-@csrf <!--  validar  -->
-
-<!-- Formulario -->
-
-<div>
+@csrf <!--  validar  --><!-- Formulario --><div>
 <label for="" class="flex flex-col justify-center items-center">Nombre</label>
-<input name="nombre" type="text " placeholder ="nombre"
+<input name="name" type="text " placeholder ="nombre"
 class="input input-bordered input-footer w-full max-w-xs text" />
 </div>
 <div>
 <label for="" class="flex flex-col justify-center items-center">Dni</label>
-<input name="edad" type="text" placeholder ="Dni"
+<input name="dni" type="text" placeholder ="Dni"
 class="input input-bordered input-footer w-full max-w-xs" />
 </div>
 <div>

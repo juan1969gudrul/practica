@@ -12,5 +12,5 @@ class Alumno extends Model
 {
    //
    use HasFactory;
-   protected $filleable = ['name', 'dni', 'email'];
+   protected $fillable = ['name', 'dni', 'email'];
 }
