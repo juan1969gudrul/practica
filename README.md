@@ -65,3 +65,32 @@ Fabricamos valores
 creo la tabla llamada Alumno
 ![alt text](image-3.png)
 
+
+
+## Acceso a ficheros html: vistas
+
+PARA ACCEDER A PAGINA HTML
+> ./resources/views
+todas son con extensión --- blade.php ---
+puedo (debo) establecr carpetas para organizarlo
+No me dejo impresionar por la cantidad de ficheros que hay
+en caso de que hayas carpetas. Si quiero acceder o referenciar una carpeta
+> carpeta.nombre
+
+
+## Controladores
+> están en app/http/controllers
+> El código php que quiero que se ejecute ante una solicitud de una ruta
+
+## Rutas
+> La ruta es la url que quiero que mi app tenga
+> Las rutas se establecen en ./routes/web.php
+> Se especifican con Route::verbo("url",.....)
+> Para poner nombre o alias a la ruta  Route::verbo("url"..)->name("alumnos.index")
+> Para referenciar una ruta por su nombre uso la función route("nombre")
+> Las rutas pueden ser parametrizada (sobre todo haciendo un crud de un recurso).
+> Una ruta parametrizada es aquella que en la url hay un parámetro (valor que puede cambiar),
+http://alumnos/1 o https://alumnos/5, donde 1 y 5 son el parámetro
+> Cuando referencio una ruta por su nombre con la funcion route, para pasar el parámetro siempre lo haré
+como segundo
+
