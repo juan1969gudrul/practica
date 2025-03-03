@@ -3,6 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Alumno; // Importamos el modelo Alumno para interactuar con la base de datos
 use Illuminate\Http\Request; // Importamos la clase Request para trabajar con los datos de la petición
+use App\Http\Requests\StoreAlumnoRequest;
 
 // Controlador AlumnoController que gestiona la lógica relacionada con los alumnos
 class AlumnoController extends Controller
@@ -25,9 +26,11 @@ class AlumnoController extends Controller
     }
 
     // Método para almacenar un nuevo alumno en la base de datos
-    public function store(Request $request) // Recibe los datos enviados desde el formulario
+    public function store(StoreAlumnoRequest $request) // Recibe los datos enviados desde el formulario
     {
+     
         $datos = $request->except("_token"); // Se obtiene toda la información del formulario, exceptuando el token de seguridad (_token)
+        
         
 
         $alumno = new Alumno($datos); // Creamos una nueva instancia del modelo Alumno con los datos recibidos
@@ -40,7 +43,7 @@ class AlumnoController extends Controller
                                                                               // Este mensaje se mostrará cuando redirijamos a la vista de listado de alumnos
         
 
-        return redirect()->route('alumno.index'); // Redirigimos al usuario a la ruta 'alumno.index', que es donde se listan todos los alumnos
+        return redirect(route('alumno.index')); // Redirigimos al usuario a la ruta 'alumno.index', que es donde se listan todos los alumnos
         
     }
 

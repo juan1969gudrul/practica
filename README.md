@@ -94,3 +94,5 @@ http://alumnos/1 o https://alumnos/5, donde 1 y 5 son el parámetro
 > Cuando referencio una ruta por su nombre con la funcion route, para pasar el parámetro siempre lo haré
 como segundo
 
+Para general una nueva base de datos
+![alt text](image.png)
