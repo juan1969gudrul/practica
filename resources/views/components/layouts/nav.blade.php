@@ -1,17 +1,31 @@
-<nav class="h-10v bg-nav flex flex-row justify-start justify-center items-center px-4">
-    
- <a href="{{route('main')}}"class="bg-#90B2CA-500 text-white py-2 px-2 rounded hover:bg-#D5E9DE-600 
-    focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded mr-4"> Home</a>
-    <button class="bg-#90B2CA-500 text-white py-2 px-2 rounded hover:bg-orange-600 
-    focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded mr-4"> About</button>
-    <button class="bg-#90B2CA-500 text-white py-2 px-2 rounded hover:bg-orange-600 
-    focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded mr-4"> Contact</button>
-    <button class="bg-#90B2CA-500 text-white py-2 px-2 rounded hover:bg-orange-600 
-    focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded "> Noticias</button>
-    
-@auth
-    <a href="{{route('alumnos.index')}}" class=" mx-4 bg-#90B2CA-500 text-white py-2 px-2 
-    rounded hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-200 btn btn-sm btn-outline p-2 rounded "> Alumnos</a>
+<nav class="bg-blue-900 text-white shadow-lg">
+    <div class="container mx-auto p-4 flex justify-center space-x-8">
+        <a href="{{route('home')}}" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+            <i class="fas fa-home mr-2"></i>
+            <span>Inicio</span>
+        </a>
+        
+        <a href="{{route('about')}}" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+            <i class="fas fa-users mr-2"></i>
+            <span>Nosotros</span>
+        </a>
+        
+        <a href="{{route('contact')}}" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+            <i class="fas fa-envelope mr-2"></i>
+            <span>Contacto</span>
+        </a>
+        
+        <a href="{{route('services')}}" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+            <i class="fas fa-futbol mr-2"></i>
+            <span>Servicios</span>
+        </a>
+        
+        @auth
+            <a href="{{route('alumno.index')}}" class="flex items-center p-3 rounded-lg hover:bg-blue-700 transition-all duration-300">
+                <i class="fas fa-graduation-cap mr-2"></i>
+                <span>Alumnos</span>
+            </a>
+        @endauth
 
-@endauth
+    </div>
 </nav>

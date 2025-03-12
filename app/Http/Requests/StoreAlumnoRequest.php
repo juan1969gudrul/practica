@@ -6,35 +6,27 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreAlumnoRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
-
-        return true; /* autorizar la petición */
-
-
+        return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            "name"=> "required|string|max:255",
-            "dni"=>[
-                "required",
-                    "string",
-                "size:10",
-                "unique:alumnos,dni", 
-                "regex:/^[0-9]{8}\-[a-zA-Z]$/",
-        ],
-            "email" => "required|string|email|max:255|unique:alumnos,email",
+            "name" => "required|string|max:255",
+            "dni" => "required|string|max:255|unique:alumnos.dni|regex:/^[0-9]{8}\-[a-zA-Z]$/",
+            "email" => "required|email|max:255|unique:alumnos.email",
         ];
+    }
 
+    public function messages(): array
+    {
+        return [
+            'dni.unique' => 'Este DNI ya está registrado en el sistema.',
+            'dni.regex' => 'El DNI debe tener el formato: 12345678-X (8 números, guión y una letra)',
+            'email.unique' => 'Este email ya está registrado en el sistema.',
+            'email.email' => 'Por favor, introduce una dirección de email válida.',
+        ];
     }
 }

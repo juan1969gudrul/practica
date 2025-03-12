@@ -30,7 +30,7 @@ class AlumnoFactory extends Factory
             'name' => $this->faker->firstName(),
             'dni'=> $this->dni(),
             'email' => $this->faker->unique()->safeEmail(),
-            'password' => Hash::make('password123'),
+          
             
         ];
     }
